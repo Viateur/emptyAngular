@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html ng-app="app">
-    <head>
-        <meta charset="utf-8">
-        <title>Angular Project</title>
-    </head>
-    <body ng-controller='mainController as vm'>
 
-        <script src="js/libs/angular.min.js"></script>
-        <script src="js/controllers/mainController.js"></script>
-        <script src="js/app.js"></script>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <title>Angular Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-controller='mainController as vm'>
+
+    <div id="formulaireClient">
+        <div id="titreFormulaire">CLIENT</div>
+        <form>
+            <label> Lastname</label> <br />
+            <input type="text" ng-model="lastname">
+            <br />
+            <label> Firstname</label> <br />
+            <input type="text" ng-model="firstname">
+            <br />
+            <label> Email</label> <br />
+            <input type="text" ng-model="email">
+            <br />
+            <br />
+            <button id="ajouter">AJOUTER</button>
+        </form>
+        <br />
+    </div>
+    <div id="listeClient">
+      <div id="titreListe">CLIENTS LISTE</div>
+        <table id='parentTable'>
+            <tr id='headTable'>
+                <td id="lastname">
+                    Lastname
+                </td>
+                <td id="firstname">
+                    Firstname
+                </td>
+                <td id="email">
+                    Email
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <script src="js/libs/angular.min.js"></script>
+    <script src="js/controllers/mainController.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
 </html>
